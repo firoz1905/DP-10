@@ -1,0 +1,6 @@
+Approach 1 : Brute Force Approach
+Time Complexity :Exponential
+Space Complexity :
+Approach 2 : Dynamic Programming by following sequence of bursting. Intution , have a decision making Array
+Time Complexity :O(m*n)
+Space Complexity :
