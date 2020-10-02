@@ -1,0 +1,23 @@
+Approach1 : DP
+Time Complexity : N^2K
+Space Complexity :
+class Solution {
+    public int superEggDrop(int K, int N) {
+        int [][] dp=new int[K][N];
+        for(int j=1;j<dp.length;j++){
+            dp[1][j]=j;// Filling the 1st Row
+        }
+        for(int i=2;i<dp.length;i++){
+            for (int j=1;j<dp[0].length;j++){
+                dp[i][j]=Integer.MAX_VALUE;
+                for(int l=1;l<=j;l++){
+                    dp[i][j]=Math.min( dp[i][j],1 +Math.max(dp[i-1])[l-1],dp[i][j-l]));
+                }
+            }
+        }
+       return dp[K][N]; 
+    }
+}
+Approach 2 : Modified DP
+Time Complexity :O(NK)
+Space Complexity :O()
